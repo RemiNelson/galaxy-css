@@ -2,11 +2,23 @@ body {
   background-color: black;
 }
 
+.gradient-container {
+  background:radial-gradient(circle, rgba(255,0,239,.3), rgba(255,0,239,0));
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-fit: stretch;
+
+}
+
 .effect-wrapper {  
   display:-webkit-box;
   -webkit-box-pack:center;
   -webkit-box-align:center;
-  background:radial-gradient(circle, rgba(255,0,239,.3), rgba(255,0,239,0));
+  position:fixed;
+  top: -50%;
+  width:100vw;
+  height:100vw;
 }
 
 /*.flowers { 
@@ -17,13 +29,6 @@ body {
   left: 0;
   top: 0;
 }*/
-
-.effect-wrapper {
-  position:fixed;
-  top: -50%;
-  width:100vw;
-  height:100vw;
-}
 
 .effect-wrapper .layer1,
 .effect-wrapper .layer2 {
@@ -40,13 +45,17 @@ body {
 .effect-wrapper .layer1,
 .effect-wrapper .layer1 * {
     background: url('stars.svg');
-    object-fit: cover;
-
+    object-fit: stretch;
+    top: -10%;
+    left: -20%;
 }
 
 .effect-wrapper .layer2,
 .effect-wrapper .layer2 * {
     background-image: url('stars.svg');
+    object-fit: stretch;
+    top: 5%;
+    left: 20%;
 } 
 
 .effect-wrapper .layer1 *,
@@ -71,7 +80,7 @@ body {
     /*-webkit-box-shadow:inset 0 0 10px rgba(255,255,255,0.3);*/
 }
 
-.effect-wrapper {
+.gradient-container {
   -webkit-animation-name: pulsate-pink;
   -webkit-animation-duration: 50s;
   -webkit-animation-iteration-count: infinite;
@@ -114,5 +123,26 @@ body {
 }
 
 @media only screen and (max-width: 1024px) {
+  .effect-wrapper {
+    height: 100vh;
+    width: 100vh;
+  }
+
+  .effect-wrapper .layer1,
+  .effect-wrapper .layer1 * {
+      background: url('stars.svg');
+      object-fit: stretch;
+      top: 70vh;
+      left: -40vw;
+  }
+
+  .effect-wrapper .layer2,
+  .effect-wrapper .layer2 * {
+      background-image: url('stars.svg');
+      object-fit: stretch;
+      top: 30vh;
+      left: 0;
+  } 
+
 }
     
