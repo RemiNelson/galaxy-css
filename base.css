@@ -3,12 +3,13 @@ body {
 }
 
 .gradient-container {
+  position: absolute;
   background:radial-gradient(circle, rgba(255,0,239,.3), rgba(255,0,239,0));
   width: 100vw;
   height: 100vh;
   background-repeat: no-repeat;
   background-fit: stretch;
-
+  top: 0;
 }
 
 .effect-wrapper {  
